@@ -1,0 +1,211 @@
+# Page Python
+
+
+## code html:
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Python</title>
+	<link rel="stylesheet" type="text/css" href="python.css">
+</head>
+<body>
+		<div class="head">
+	  	<img src="image/logo1.png" width="300" height="200">
+	  	<h1 class="t1">Language De Programmation</h1>
+	
+	</div>
+
+
+
+	<div class="connect">
+		<button class="connect1"><a href="connexion.html" class="a1">connexion</a></button>
+        <button class="connect2"><a href="inscri.html" class="a1">inscription</a></button>
+	</div>
+
+    <div class="container">
+	<div class="nav">
+	    <nav>
+	  	
+	  	    <ol>
+	  	        
+	  		       <h3><li><a href="html5.html" class="a1">HTML5</a></li></h3>
+	  		       <br>
+	  		       <h3><li><a href="css.html" class="a1">CSS</a></li></h3>
+	  		       <br>
+	  		       <h3><li><a href="javascript.html" class="a1">Javascript</a></li></h3>
+	  		       <br>
+	  		       <h3><li><a href="java.html" class="a1">Java</a></li></h3>
+	  		       <br>
+	  	           <h3><li><a href="python.html" class="a1">Python</a></li></h3>
+	  	           <br>
+	  		       <h3><li><a href="r.html" class="a1">R</a></li></h3>
+	  		    
+	  	    </ol>
+        </nav>
+	    
+    </div>
+     
+
+     <section class="def">
+     	<h1 style="color: white;">Python<br></h1>
+     	<p style="font-family: arial;font-size: 20px">
+     		<strong>
+     			Python  est un langage de programmation interprété, multi-paradigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet. Il est doté d'un typage dynamique fort, d'une gestion automatique de la mémoire par ramasse-miettes et d'un système de gestion d'exceptions ; il est ainsi similaire à Perl, Ruby, Scheme, Smalltalk et Tcl.
+
+Le langage Python est placé sous une licence libre proche de la licence BSD4 et fonctionne sur la plupart des plates-formes informatiques, des smartphones aux ordinateurs centraux5, de Windows à Unix avec notamment GNU/Linux en passant par macOS, ou encore Android, iOS, et peut aussi être traduit en Java ou .NET. Il est conçu pour optimiser la productivité des programmeurs en offrant des outils de haut niveau et une syntaxe simple à utiliser.
+
+Il est également apprécié par certains pédagogues qui y trouvent un langage où la syntaxe, clairement séparée des mécanismes de bas niveau, permet une initiation aisée aux concepts de base de la programmation6
+     		</strong>
+     	</p>
+     	
+     </section>
+
+     <section class="exp">
+     	<h3 style="color: white;">Utilisation du Python</h3>
+     	<p style="font-family: arial;font-size: 20px;">
+     		<strong>
+     			Python est un langage de programmation qui peut s'utiliser dans de nombreux contextes et s'adapter à tout type d'utilisation grâce à des bibliothèques spécialisées. Il est cependant particulièrement utilisé comme langage de script pour automatiser des tâches simples mais fastidieuses, comme un script qui récupérerait la météo sur Internet ou qui s'intégrerait dans un logiciel de conception assistée par ordinateur afin d'automatiser certains enchaînements d'actions répétitives (voir la section Adoption). On l'utilise également comme langage de développement de prototype lorsqu'on a besoin d'une application fonctionnelle avant de l'optimiser avec un langage de plus bas niveau. Il est particulièrement répandu dans le monde scientifique, et possède de nombreuses bibliothèques optimisées destinées au calcul numérique.
+     		</strong>
+     	</p>
+     </section>
+
+
+  
+     	<figure class="logo">
+     		<img src="image/python.png" height="300" width="400">
+     		<figcaption>
+     			<strong>Details:<br></strong>
+     			Date de première version	20 février 19911<br>
+                Paradigmes	Objet, impératif et fonctionnel<br>
+                Auteur	Guido van Rossum<br>
+                Développeurs	Python Software Foundation
+     		</figcaption>
+     	</figure>
+     
+
+
+
+     <img src="image/codepython.png" class="code" width="500">
+
+
+</div>
+     
+
+
+    <footer class="footer">
+    	
+        <p><strong>Copyright 2020<br> Tous les droits sont reservés<br></strong></p>
+        <a href="contact.html" class="a1"><strong>Nous contactez</strong></a>
+    	
+    </footer>
+
+</body>
+</html>
+
+
+=============================================================================
+
+
+## code css:
+
+
+body{
+	background-color: #C70039 ;
+}
+.head{
+	display: grid;
+	grid-template-columns: 20% 80%;
+	border-radius: 10px;
+	border: 5px outset black;
+	}
+.t1{
+    grid-column-start: 2;
+    text-align: center;
+    font-size: 450%;
+}
+.nav{
+	display: flex;
+	align-items: stretch;
+	background-color: #D98880  ;
+	width: 10;
+	height: 200;
+	border-radius: 5px;
+	border: 2px inset black;
+	margin: 10px;
+	grid-row-start: 1;
+	grid-row-end: 4;
+	grid-column:1;
+	
+}
+.connect{
+	display: flex;
+	justify-content: flex-end;
+}
+.connect1 {
+	border-radius:12px;
+	background: #D98880 ;
+	border:2px;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px;
+	margin: 5px;
+}
+.connect2 {
+	border-radius:12px;
+	background: #D98880 ;
+	border:2px;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px ;
+	margin: 5px;
+}
+
+.footer{
+	background-color: #D98880 ;
+	text-align: center;
+}
+
+.a1:hover{
+    font-size: 25px;
+}
+.a1:visited{
+	color: red;
+}
+
+.container{
+	display: grid;
+	grid-template-rows: 150px 300px 200px 600px ;
+	grid-template-columns: 20% 40% 40%;
+}
+
+
+
+.def{
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column: 2;
+	padding: 10px;
+}
+
+
+.exp{
+	grid-row: 4;
+	grid-column: 2;
+	padding: 5px;
+}
+
+
+.logo{
+	grid-row: 2;
+	grid-column: 3;
+	padding: 0px 0px 0px 0px;
+}
+
+
+.code{
+	grid-row: 4;
+	grid-column: 3;
+	padding: 100px 0px 0px 20px;
+}
+
