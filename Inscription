@@ -135,6 +135,28 @@ form{
 =============================================================================
 
 
+
+
+## code html page resultante :
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resultat</title>
+	<link rel="stylesheet" type="text/css" href="result.css">
+</head>
+<body onload="affiche();">
+	<script type="text/javascript" src="inscri.js"></script>
+
+</body>
+</html>
+
+
+=======================================================================================
+
+
+
 ## Code js:
 
 
