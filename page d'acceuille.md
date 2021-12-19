@@ -77,11 +77,11 @@ Les premiers langages de programmation ont été créés dans les années 1950 e
     <section class="c4">
     	
     	<p style="font-size: 20px;"><strong>
-    		L’un des plus connus est l’index TIOBE, qui est élaboré en combinant le nombre de pages web consacrées à une langue, le nombre de recherches dans différents moteurs de recherche, le nombre de professionnels certifiés,… 
+    		L’un des plus connus est l’index TIOBE, qui est élaboré en combinant le nombre de pages web consacrées à une langue, le nombre de recherches dans différents              moteurs de recherche, le nombre de professionnels certifiés,… 
 
             Toutefois, en comptant le nombre de pages consacrées à une langue, l’indice TIOBE peut ne pas refléter l’intérêt et l’utilisation actuels réels. 
 
-            En revanche, le Popularity of Programming Language Index (PYPL) analyse la fréquence avec laquelle les tutoriels sont recherchés pour apprendre un langage de programmation. 
+            En revanche, le Popularity of Programming Language Index (PYPL) analyse la fréquence avec laquelle les tutoriels sont recherchés pour apprendre un langage de                    programmation. 
 
             Ainsi, il suppose que plus il y a de recherches, plus le langage de programmation est populaire .
     	</strong></p>
