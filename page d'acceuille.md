@@ -101,6 +101,111 @@ Les premiers langages de programmation ont été créés dans les années 1950 e
 
 
     <footer class="footer">
+	    
+	    
+	    
+============================================================================	    
+	    
+	    
+	    
+	    
+## code css:
+	    
+	    
+	    body{
+	background-color: #C70039 ;
+}
+.head{
+	display: grid;
+	grid-template-columns: 20% 80%;
+	border-radius: 10px;
+	border: 5px outset black;
+	}
+.t1{
+    grid-column-start: 2;
+    text-align: center;
+    font-size: 450%;
+}
+.nav{
+	display: flex;
+	align-items: stretch;
+	background-color: #D98880 ;
+	width: 10;
+	height: 200;
+	border-radius: 5px;
+	border: 2px inset black;
+	margin: 10px;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column:1;
+	
+}
+.connect{
+	display: flex;
+	justify-content: flex-end;
+}
+.connect1 {
+	border-radius:12px;
+	background: #D98880 ;
+	border:2px;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px;
+	margin: 5px;
+}
+.connect2 {
+	border-radius:12px;
+	background: #D98880 ;
+	border:2px;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px ;
+	margin: 5px;
+}
+
+.container{
+	display: grid;
+	grid-template-rows: 20% 20% 35% 15% 10%;
+	grid-template-columns: 20% 40% 40%;
+}
+.c2{
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column: 2;
+	
+	margin: 10px;
+	font-family: arial;
+}
+.c3{
+	grid-row: 2;
+	grid-column: 3;
+	margin: 10px;
+}
+.c4{
+	grid-row-start: 4;
+	grid-row-end: 5;
+	grid-column: 2;
+	border-radius: 5px outset black;
+	margin: 10px;
+	font-family: arial;
+}
+.c5{
+	grid-row: 4;
+	grid-column: 3;
+	margin: 10px;
+}
+.footer{
+	background-color: #D98880 ;
+	text-align: center;
+}
+
+
+.a1:hover{
+    font-size: 25px;
+}
+.a1:visited{
+	color: red;
+}
     	
     		<p><strong>Copyright 2020<br> Tous les droits sont reservés<br></strong></p>
             <a href="contact.html" class="a1"><strong>Nous contactez</strong></a>
@@ -114,6 +219,7 @@ Les premiers langages de programmation ont été créés dans les années 1950 e
 </html>
 
 
-==================================================================
+
+
 
 
