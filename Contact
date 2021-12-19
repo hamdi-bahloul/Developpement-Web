@@ -112,6 +112,22 @@ form{
 
 
 
+## code html page resultante :
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resultat contact</title>
+</head>
+<body onload="affiche();">
+	<script type="text/javascript" src="contact.js"></script>
+
+</body>
+</html>
+
+
+===========================================================================================
 ## Code js:
 
 
