@@ -1,0 +1,256 @@
+# Inscription:
+
+
+## Code html:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inscription</title>
+	<link rel="stylesheet" type="text/css" href="inscri.css">
+</head>
+<body>
+	<script type="text/javascript" src="inscri.js"></script>
+    <form action="#" method="post" class="form">
+    	
+    		<h3>Saisez vos données SVP</h3>
+    		    <p>
+    		       <label for="nom">Nom</label> : <input type="text" name="nom" id="nom" onblur="test1();">
+    	        </p>
+    	        <p>
+    	           <label for="prenom">Prenom</label> : <input type="text" name="prenom" id="prenom" onblur="test2();">
+    	        </p>
+    	         <p>
+    		       <label for="age">Age</label> : <input type="number" name="age" id="age" onblur="test3();">
+    	        </p>
+    	        
+    	        <label>Sex :</label>
+    	        
+    	        
+    	        <input type="radio" name="male" id="male" ><label for="male">Male</label>
+    	         <input type="radio" name="femelle" id="femelle" ><label for="femelle">Femelle</label>
+    	        
+    	         <p>
+    		       <label for="pays">Vous etes de quel pays ? </label> : <select name="pays" id="pays">
+    		       	<option value="tunisie">Tunisie</option>
+    		       	<option value="Algerie">Algerie</option>
+    		       	<option value="marroc">Marroc</option>
+    		       	<option value="France">France</option>
+    		       	<option value="USA">USA</option>
+
+    		       	
+    		       </select>
+    	        </p>
+    	         <p>
+    		       <label for="email">Adresse mail</label> : <input type="email" name="email" id="email" onblur="test4();">
+    	        </p>
+    	         <p>
+    		       <label for="mdp">Mot de passe</label> : <input type="password" name="mdp" id="mdp" onblur="test5();">
+    	        </p>
+    	        <button class="valider" onclick="valider();"><a href="result.html" style="color: white;">S'inscrire</a></button>
+    	        <button class="annuler" onclick="annuler();"><a href="page.html" style="color: white;">Annuler</a></button>
+    	        <p style="font-size: 15px;">Vous avez déja un compte?<a href="connexion.html">Connectez-vous</a></p>
+   
+
+    		
+    	
+    </form>
+     <footer class="c6">
+    	
+    		<p><strong>Copyright 2020<br> Tous les droits sont reservés<br></strong></p>
+    		<p><a href="contact.html" class="a1"><strong>Nous contactez</strong></a></p>
+    	
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+================================================================================================
+
+## Code css:
+
+
+body{
+    background-color: #C70039 ;
+    display: grid;
+   
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 90% 10%;
+}
+form{
+    background-color: #BDC3C7;
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    font-family: arial;
+    font-size: 25px;
+    border-radius: 20px ;
+    margin: 10px;
+    padding: 10px;
+}
+.valider {
+    border:12px;
+    background: #1027E5 ;
+    border:2px;
+    color:#fff;
+    font:bold 12px Verdana;
+    padding:6px;
+    margin: 5px;
+}
+.annuler {
+    border:12px;
+    background: #1027E5 ;
+    border:2px;
+    color:#fff;
+    font:bold 12px Verdana;
+    padding:6px;
+    margin: 5px;
+}
+.c6{
+    background-color: #D98880 ;
+    text-align: center;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 100px;
+
+}
+
+
+.a1:hover{
+    font-size: 25px;
+}
+.a1:visited{
+    color: red;
+}
+
+
+
+
+=============================================================================
+
+
+## Code js:
+
+
+
+function test1(){
+	var x=document.querySelector('#nom');
+	if (x.value!='' && isNaN(x.value)){
+	     localStorage.setItem('nom',x.value);
+	}
+	else{
+		alert('saisez votre nom SVP !!!');
+		x.focus();
+	}
+}
+
+
+
+function test2(){
+	var x=document.querySelector('#prenom');
+	if (x.value!='' && isNaN(x.value)){
+	     localStorage.setItem('prenom',x.value);
+	}
+	else{
+		alert('saisez votre prenom SVP !!!');
+		x.focus();
+	}
+}
+
+
+
+function test3(){
+	var x=document.querySelector('#age');
+	if(x.value<18  || x.value===''){
+		alert('saisez un age supérieure a 18 SVP !!!');
+		x.focus();
+	}
+}
+
+function test4(){
+	var x=document.querySelector('#email');
+	if (x.value===''){
+		alert('saisez votre email SVP !!!');
+		x.focus();
+	}
+}
+
+function test5(){
+	var x=document.querySelector('#mdp');
+	if (x.value.length<8 || x.value===''){
+		alert('Votre mot de passe est court veuillez saisez un autre plus long SVP !!! ');
+		x.focus();
+	}
+}
+
+
+function valider(){
+	var x=document.querySelector('#nom');
+	var y=document.querySelector('#prenom');
+	var z=document.querySelector('#age');
+	var w=document.querySelector('#email');
+	var v=document.querySelector('#mdp');
+	if(x.value==='' || y.value==='' || z.value==='' || w.value==='' || v.value===''){
+		alert('Remplir les données manquantes SVP !!!');
+		x.focus();
+		
+	}
+	else{
+		localStorage.setItem('nom',x.value);
+		localStorage.setItem('prenom',y.value);
+		localStorage.setItem('age',z.value);
+		localStorage.setItem('email',w.value);
+		localStorage.setItem('mdp',v.value);
+	}
+}
+
+
+
+
+function annuler(){
+	alert('Les modification que vous avez fait ne seront pas enregistrées.Voulez vous vraiment quitter ?')
+}
+
+
+
+function affiche(){
+	if(localStorage.getItem('nom') && localStorage.getItem('prenom') && localStorage.getItem('age') && localStorage.getItem('email') && localStorage.getItem('mdp')){
+		document.write('Salut '+localStorage.getItem('nom')+' '+localStorage.getItem('prenom')+'.'+'Merci pour votre inscription.Votre compte a ete creer avec succes<br>');
+		document.write('<a href="page.html">Accueil</a>');
+	}
+	else{
+		document.write('veuillez verifier vos saisies SVP !!!<br>');
+		document.write('<a href="inscri.html">Retour au formulaire</a>');
+	}
+	localStorage.clear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
