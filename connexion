@@ -1,0 +1,171 @@
+# Connexion:
+
+
+## Code html:
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Connexion</title>
+	<link rel="stylesheet" type="text/css" href="connexion.css">
+</head>
+<body>
+	<script type="text/javascript" src="connexion.js"></script>
+	<form action="#" method="post">
+		
+			<legend>Saisez vos données</legend>
+			  <p>
+    		       <label for="email">Adresse mail</label> : <input type="email" name="email" id="email" onblur="test1();">
+    	        </p>
+    	         <p>
+    		       <label for="mdp">Mot de passe</label> : <input type="password" name="mdp" id="mdp" onblur="test2();">
+    	        </p>
+    	        <button class="valider" onclick="valider();"><a href="result1.html" style="color: white;">Se connecter</a></button>
+    	        <button class="annuler" onclick="annuler();"><a href="page.html" style="color: white;">Annuler</a></button>
+    	        <p style="font-size: 15px;">Vous n'avez pas un compte?<a href="inscri.html">Creer un compte</a></p>
+		
+	</form>
+	 </form>
+     <footer class="c6">
+    	
+    		<p><strong>Copyright 2020<br> Tous les droits sont reservés<br></strong></p>
+    		<a href="contact.html" class="a1"><strong>Nous contactez</strong></a>
+    	
+    </footer>
+
+</body>
+</html>
+
+
+========================================================================================
+
+
+## Code css
+
+body{
+    background-color: #C70039 ;
+    display: grid;
+   
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 90% 10%;
+}
+
+
+
+
+
+
+
+
+form{
+    background-color: #BDC3C7;
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    font-family: arial;
+    font-size: 25px;
+    border-radius: 20px ;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.c6{
+    background-color: #D98880 ;
+    text-align: center;
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+
+.valider {
+    border:12px;
+    background: #1027E5 ;
+    border:2px;
+    color:#fff;
+    font:bold 12px Verdana;
+    padding:6px;
+    margin: 5px;
+}
+.annuler {
+    border:12px;
+    background: #1027E5 ;
+    border:2px;
+    color:#fff;
+    font:bold 12px Verdana;
+    padding:6px;
+    margin: 5px;
+}
+
+.a1:hover{
+    font-size: 25px;
+}
+.a1:visited{
+	color: red;
+}
+
+
+=====================================================================================
+
+
+
+## Code js:
+
+
+
+function test1(){
+	var x=document.querySelector('#email');
+	if(x.value===''){
+		alert('Saisez votre email SVP !!!');
+		x.focus();
+	}
+}
+
+function test2(){
+	var x=document.querySelector('#mdp');
+	if (x.value.length<8 || x.value===''){
+		alert('Votre mot de passe est court veuillez saisez un autre plus long SVP !!! ');
+		x.focus();
+	}
+}
+
+
+function valider(){
+	
+	var x=document.querySelector('#email');
+	var y=document.querySelector('#mdp');
+    if(x.value!='hamdibahloul8@gmail.com' || y.value!='123456789'){
+        alert('Verifier que email soit hamdibahloul8@gmail.com et que le mot de passe soit 123456789 SVP !!!');
+        x.focus();
+        y.focus();
+    }
+    else{
+    	localStorage.setItem('email',x.value);
+    	localStorage.setItem('mdp',y.value);
+    }
+}
+
+
+function annuler(){
+	alert('Voulez vous vraiment quitter ?')
+}
+
+function affiche(){
+	if (localStorage.getItem('email') && localStorage.getItem('mdp')){
+	document.write('Bienvenue.Vous etes connecte<br>');
+	document.write('Vous pouvez maintenant naviguer sur notre <a href="page.html">site</a>');
+	}
+	else{
+		document.write('Donnees invalides !!!!<br>' );
+		document.write('<a href="inscri.html">Acceder au formulaire et creer un compte</a>');
+	}
+	localStorage.clear();
+}
+
+
+
+
+
+
+
