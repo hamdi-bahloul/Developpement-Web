@@ -1,0 +1,192 @@
+# Contact:
+
+
+## Code html:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+<body>
+	<script type="text/javascript" src="contact.js"></script>
+	<form action="#" method="post">
+		<legend>Saisez vos données</legend>
+		    <p>
+    		    <label for="email">Adresse mail</label> : <input type="email" name="email" id="email" onblur="test1();">
+    	    </p>
+    	    <p>
+    	    	<label for="text">Comment pouvons-nous vous aider ?</label>:<textarea name="text" id="text" cols="30" rows="5" onblur ="test2();"></textarea>
+    	    </p>
+    	    <button class="envoyer" onclick="envoyer();"><a href="resultcontact.html" style="color: white;">Envoyer</a></button>
+    	    <button class="annuler" onclick="annuler();"><a href="page.html" style="color: white;">Annuler</a></button>
+	</form>
+	 <footer class="c6">
+    	
+    		<p><strong>Copyright 2020<br> Tous les droits sont reservés<br></strong></p>
+    		<a href="contact.html" class="a1"><strong>Nous contactez</strong></a>
+    	
+    </footer>
+
+</body>
+</html>
+
+
+
+
+=======================================================================================
+
+
+## Code css:
+
+
+
+body{
+    background-color: #C70039 ;
+    display: grid;
+   
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 90% 10%;
+}
+
+
+
+form{
+    background-color: #BDC3C7;
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    font-family: arial;
+    font-size: 25px;
+    border-radius: 20px ;
+    margin: 10px;
+    padding: 10px;
+    height: 300px;
+    width: 500px;
+}
+
+
+.envoyer {
+    border:12px;
+    background: #1027E5 ;
+    border:2px;
+    color:#fff;
+    font:bold 12px Verdana;
+    padding:6px;
+    margin: 5px;
+
+}
+.annuler {
+    border:12px;
+    background: #1027E5 ;
+    border:2px;
+    color:#fff;
+    font:bold 12px Verdana;
+    padding:6px;
+    margin: 5px;
+}
+
+.c6{
+    background-color: #D98880 ;
+    text-align: center;
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+
+
+.a1:hover{
+    font-size: 25px;
+}
+.a1:visited{
+    color: red;
+}
+
+
+
+
+=========================================================================================
+
+
+
+## Code js:
+
+
+
+function test1(){
+	var x=document.querySelector('#email');
+	if(x.value===''){
+		alert('Saisez votre email SVP !!!');
+		x.focus();
+	}
+}
+
+function test2(){
+	var x=document.querySelector('#text');
+	if(x.value===''){
+		alert('veuillez saisir votre message SVP !!!');
+		x.focus();
+	}
+}
+
+function envoyer(){
+	x=document.querySelector('#email');
+	y=document.querySelector('#text');
+	if(x.value==='' || y.value===''){
+		alert('Remplir les cases vides SVP !!!');
+		x.focus();
+		y.focus();
+	}
+	else{
+		localStorage.setItem('email',x.value);
+		localStorage.setItem('text',y.value);
+	}
+}
+
+function annuler(){
+	alert('Voulez vous vraiment quitter ?')
+}
+
+
+
+function affiche(){
+	if(localStorage.getItem('email') && localStorage.getItem('text')){
+		document.write('Votre message a ete envoyer avec succes.nous vous repondrons tres bientot<br>');
+		document.write('<a href="page.html">Acceuil</a>')
+	}
+	else{
+		document.write('Verifier vos saisies SVP !!!<br>');
+		document.write('<a href="contact.html">Retour</a>');
+	}
+	localStorage.clear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
